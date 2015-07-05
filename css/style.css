@@ -89,7 +89,7 @@ p {
 
 ul {
     padding: 4px 0;
-    padding-left: 24px;
+    padding-left: 32px;
     list-style-type: square;
 }
 
@@ -99,12 +99,17 @@ a {
 
 #content-wrapper {
     margin: 0 auto;
-    max-width: 600px;
+    max-width: 750px;
+    font-size: 0;
 }
 
 #header {
-    padding: 10px;
-    border-bottom: 1px solid #d7d1d1;
+    display: inline-block;
+    box-sizing: border-box;
+    width: 150px;
+    vertical-align: top;
+    padding: 10px 20px 10px 0;
+    font-size: 12pt;
 }
 
     #header #title {
@@ -123,8 +128,15 @@ a {
         }
 
         #header #menu .menu-item {
-            padding-right: 12px;
+            display: block;
         }
+
+#content {
+    display: inline-block;
+    box-sizing: border-box;
+    max-width: 600px;
+    font-size: 10pt;
+}
 
 /* Post List */
 
@@ -147,7 +159,7 @@ a {
 /* Portfolio */
 
 #portfolio {
-    font-size: 0;
+    font-size: 10pt;
 }
 
     #portfolio .portfolio-item {
@@ -164,7 +176,26 @@ a {
         }
 
         #portfolio .portfolio-item p {
-            font-size: 9pt;
             padding-left: 10px;
             padding-right: 10px;
         }
+
+        #portfolio .portfolio-item img {
+            width: 100%;
+            max-width: 598px;
+        }
+
+@media (max-width: 800px) {
+    #content-wrapper {
+        max-width: 600px;
+    }
+    #header {
+        width: 100%;
+        padding: 10px;
+        border-bottom: 1px solid #d7d1d1;
+    }
+        #header #menu .menu-item {
+            padding-right: 12px;
+            display: inline;
+        }
+}
